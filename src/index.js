@@ -8,6 +8,10 @@ const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT || 3000
 
+// app.use((req, res, next) =>{
+//         res.status(503).send('error: site under work')
+// })
+
 // auto parse incoming json to object and acces in req handlers
 app.use(express.json())
 app.use(userRouter)
